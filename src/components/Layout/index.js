@@ -1,4 +1,5 @@
 import { AppShell, Navbar } from '@mantine/core';
+import { Outlet } from 'react-router-dom';
 import Mainlinks from './MainLinks';
 
 const Layout = () => {
@@ -13,7 +14,9 @@ const Layout = () => {
               {<Mainlinks />}
             </Navbar.Section>
           </Navbar>
-        }></AppShell>
+        }>
+        <Outlet />
+      </AppShell>
     </>
   );
 };
