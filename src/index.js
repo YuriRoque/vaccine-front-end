@@ -1,6 +1,11 @@
+import { MantineProvider } from '@mantine/core';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import Router from './Router';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Router />);
+ReactDOM.render(
+  <MantineProvider>
+    <Router />
+  </MantineProvider>,
+  document.getElementById('root'),
+);
